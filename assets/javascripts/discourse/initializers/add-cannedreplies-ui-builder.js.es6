@@ -16,7 +16,7 @@ function initializeCannedRepliesUIBuilder(api) {
       id: "canned_replies_button",
       icon: "clipboard",
       action: 'showCannedRepliesButton',
-      label: 'canned_replies.composer_button_text'
+      label: 'Add a Dropbox Link'
     };
   });
 }
