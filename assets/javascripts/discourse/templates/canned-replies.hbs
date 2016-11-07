@@ -9,16 +9,17 @@
        var options = {
     success: function(files) {
         alert("Here's the file link: " + files[0].link)
+        //TODO Append this file name to the text input box....
     },
     cancel: function() {
-
+        alert("Why you no attach")
     },
     linkType: "preview", // or "direct"
     multiselect: false, // or true
     extensions: ['.pdf', '.doc', '.docx'],
 };
         var button = Dropbox.createChooseButton(options);
-        document.getElementsByClassNames("dropbox-chooser").appendChild(button);
+        document.getElementsByClassName("dropbox-chooser").appendChild(button);
       </script>
     </div>
 
