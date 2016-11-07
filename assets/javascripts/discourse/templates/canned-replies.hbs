@@ -1,27 +1,35 @@
 <div class="modal-body template-manager-modal" style="overflow: visible">
   <div class="details">
     <div class="reply-selector">
-      <div class="selector">
-        {{combo-box id="repliesComboBox" name="replies" valueAttribute="id" value=controller.selectedReplyID nameProperty="title" content=replies}}
-        <span id="sortCannedRepliesAlphabetically">
-          {{d-button class="btn-primary pull-right" action="sortAlphabetically" icon="sort-alpha-asc" title="canned_replies.insert.sort.alphabetically"}}
-        </span>
-        <span id="sortCannedRepliesByUsage" style="display: none">
-          {{d-button class="btn-primary pull-right" action="sortByUsage" icon="sort-amount-desc" title="canned_replies.insert.sort.usage"}}
-        </span>
+      <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="p8scif5uzqqk35v"></script>
+      <div class="chooser">
+
       </div>
+      <script>
+       var options = {
+    success: function(files) {
+        alert("Here's the file link: " + files[0].link)
+    },
+    cancel: function() {
+
+    },
+    linkType: "preview", // or "direct"
+    multiselect: false, // or true
+    extensions: ['.pdf', '.doc', '.docx'],
+};
+        var button = Dropbox.createChooseButton(options);
+        document.getElementById("chooser").appendChild(button);
+      </script>
     </div>
 
     <div class="content">
-        <div>
-          {{{selectedReply.cooked}}}
-        </div>
+      <div>
+        {{{selectedReply.cooked}}}
+      </div>
     </div>
 
   </div>
 </div>
 <div class="modal-footer">
   {{d-button class="btn-default pull-left" action="newReply" icon="plus" label="canned_replies.insert.new_button"}}
-  {{d-button class="btn-default pull-left" action="editReply" icon="pencil" label="canned_replies.insert.edit_button"}}
-  {{d-button class="btn-primary pull-right" action="apply" icon="clipboard" label="canned_replies.insert.insert_button"}}
 </div>

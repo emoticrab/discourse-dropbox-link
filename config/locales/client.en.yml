@@ -1,12 +1,12 @@
 en:
   js:
     canned_replies:
-      composer_button_text: "Canned replies"
+      composer_button_text: "Add Dropbox Link"
       insert:
         insert_button: "Add"
-        new_button: "New"
+        new_button: "Post Links"
         edit_button: "Edit"
-        modal_title: "Insert Canned Reply"
+        modal_title: "Add Dropbox Links"
         sort:
           alphabetically: "Sort alphabetically"
           usage: "Sort by frequency of use"
