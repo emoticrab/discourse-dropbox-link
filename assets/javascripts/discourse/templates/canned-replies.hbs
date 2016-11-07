@@ -2,7 +2,7 @@
   <div class="details">
     <div class="reply-selector">
       <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="p8scif5uzqqk35v"></script>
-      <div class="chooser">
+      <div class="dropbox-chooser">
 
       </div>
       <script>
@@ -18,7 +18,7 @@
     extensions: ['.pdf', '.doc', '.docx'],
 };
         var button = Dropbox.createChooseButton(options);
-        document.getElementById("chooser").appendChild(button);
+        document.getElementsByClassNames("dropbox-chooser").appendChild(button);
       </script>
     </div>
 
